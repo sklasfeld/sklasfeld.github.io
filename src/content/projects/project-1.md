@@ -6,13 +6,15 @@ publishDate: 'Feb 28 2022'
 isFeatured: true
 seo:
   image:
-    src: 'https://www.medrxiv.org/content/medrxiv/early/2024/12/18/2024.12.17.24318501/F7.large.jpg'
+    src: 'public/modifier_barchart_invert_V6.png'
     alt: Project preview
     width: 200
     height: 150
 ---
-
-<img src="https://www.medrxiv.org/content/medrxiv/early/2024/12/18/2024.12.17.24318501/F7.large.jpg" alt="modifersimage" width="350"/>
+<p align="center">
+<img class="block dark:hidden" src="/modifier_barchart_V6.png" alt="modifersimage" width="350"/>
+<img class="hidden dark:block" src="/modifier_barchart_invert_V6.png" alt="modifersimage" width="350"/>
+</p>
 
 **Figure**. Inherited threshold model of disease describes how common modifiers may influence rare monogenic diseases (Klasfeld *et al* 2014, Kingdom &Wright 2022)
 

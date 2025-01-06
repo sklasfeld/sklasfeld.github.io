@@ -5,9 +5,10 @@ company: 'Boyce Thompson Institute, Ithaca, NY'
 publishDate: 'Jun 25 2012'
 seo:
   image:
-    src: 'http://bioinfo.bti.cornell.edu/static/img/production.png'
+    src: '/project_5.png'
 ---
 
+<!---
 ```mermaid
 %%{
   init: { 
@@ -21,12 +22,12 @@ seo:
  }
 }%%
 graph TD;
-    A[Clean the raw data by removing barcode and adapters]--> B[Align reads to the virus database];
-    B-->C[Contigs correction];
-    C-->D[Remove redundant sequences];
-    A --> E[Assemble contigs using velvet assembly];
-    E --> F[Blast against non-redundant protein Sequences]
-    F --> G[Compare results back to virus genome contigs]
+    A[Clean the raw data by removing barcode and adapters]-> B[Align reads to the virus database];
+    B->C[Contigs correction];
+    C->D[Remove redundant sequences];
+    A -> E[Assemble contigs using velvet assembly];
+    E -> F[Blast against non-redundant protein Sequences]
+    F -> G[Compare results back to virus genome contigs]
 
     subgraph ALIGNMENT
             B
@@ -40,6 +41,12 @@ graph TD;
             G
           end
 ```
+-->            
+<p align="center">
+<img class="block dark:hidden" src="/project_5.png" alt="modifersimage" width="350"/>
+<img class="hidden dark:block" src="/project_invert_5.png" alt="modifersimage" width="350"/>
+</p>
+
 
 **Figure**. The pipeline utilized for alignment of known sweet potato viruses genomes (left) and assembly of novel ones (right).
 

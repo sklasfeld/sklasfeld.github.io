@@ -6,11 +6,11 @@ publishDate: 'Aug 25 2015'
 isFeatured: true
 seo:
   image:
-    src: '/project-2.jpeg'
+    src: '/project-2.png'
     alt: Project preview
 ---
 
-![Project preview](/project-2.jpeg)
+![Project preview](/project-2.png)
 
 **Figure**. Cut & Run reads mapped to *Arabidopsis* genome show that greenscreen regions identify regions of ultra-high artifacts in both ChIP-seq and Cut & Run sequencing experiments (Klasfeld *et al* 2022). 
 

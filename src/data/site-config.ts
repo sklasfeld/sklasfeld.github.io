@@ -104,10 +104,11 @@ const siteConfig: SiteConfig = {
     hero: {
         text: "Samantha Klasfeld is a computational biologist with expertise in statistical genetics \
         and genomics analysis who is committed to solving complex questions through \
-        data analysis, statistical inference, collaboration, and creativity. \
+        data analysis, statistical inference, collaboration, and creativity.<br><br>\
         Samantha is a postdoctoral research fellow in Integrative Biology Group \
         within the Internal Medicine Research Unit at Pfizer actively studying the genetic \
-        architecture of cardiomyopathy subtypes. Samantha received her PhD from The University \
+        architecture of cardiomyopathy subtypes.<br><br> \
+        Samantha received her Ph.D. from The University \
         of Pennsylvania in Genomics and Computational Biology in 2021 where she worked on a variety \
         of projects related to chromatin regulation in plants.",
         image: {
