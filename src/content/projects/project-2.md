@@ -18,9 +18,7 @@ seo:
 
 * Developed [Greenscreen method](https://github.com/sklasfeld/GreenscreenProject) to accurately identify and mask false-positive ChIP-seq peaks with efficacy in *Arabidopsis*, *Drosophila*, and *Oryza sativa* resulting in 1st author publication
 
-* Designed and orchestrated Next Generation Sequencing (NGS) data analysis (eg. ChIP-Seq, RNA-seq, MNase-seq) to measure
-the activity and outcomes of mobile and DNA binding proteins functional in cellular reprogramming, resulting in three 2nd author
-publications
+* Designed and orchestrated Next Generation Sequencing (NGS) data analysis (eg. ChIP-Seq, RNA-seq, MNase-seq) to measure the activity and outcomes of mobile and DNA binding proteins functional in cellular reprogramming, resulting in three 2nd author publications
 
 ## Publications
 

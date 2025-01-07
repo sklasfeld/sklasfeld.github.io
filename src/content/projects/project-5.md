@@ -48,7 +48,7 @@ graph TD;
 </p>
 
 
-**Figure**. The pipeline utilized for alignment of known sweet potato viruses genomes (left) and assembly of novel ones (right).
+**Figure**. The pipeline I used for alignment of known sweet potato viruses genomes (left) and assembly of novel ones (right).
 
 ## Summary:
 

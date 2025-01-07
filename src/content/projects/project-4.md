@@ -10,13 +10,13 @@ seo:
 
 ![Project preview](/project-4.png)
 
-**Figure**. An example of microRNA in *Rotylenchulus reniformis*, a parasitic nematode of plants, predicted using mirDeep2 and validated with CentroidFold during Klasfeld's summer internship.
+**Figure**. An example of microRNA in *Rotylenchulus reniformis*, a parasitic nematode of plants, predicted using [mirDeep2](https://www.mdc-berlin.de/content/mirdeep2-documentation) and validated with [CentroidFold](http://rtools.cbrc.jp/centroidfold/) during my summer internship.
 
 ## Summary:
 
 * Investigated novel microRNAs in *R. reniformis*
 
-* Assessed AHA and PBJelly as gap closing and scaffold tools for *Medicago truncatula*, a legume of scientific interest due to its symbiotic relationships with nitrogen-fixing bacteria and fungi, using PacBio sequencing data
+* Assessed [AHA](https://rhallpb.github.io/Applications/AHA.html) and [PBJelly](https://sourceforge.net/p/pb-jelly/wiki/Home/) as gap closing and scaffold tools for *Medicago truncatula*, a legume of scientific interest due to its symbiotic relationships with nitrogen-fixing bacteria and fungi, using PacBio sequencing data
 
 ## Relevant Publications
 

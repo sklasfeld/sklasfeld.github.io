@@ -14,12 +14,11 @@ seo:
 
 ## Summary:
 
-* Compared Genotype by Sequencing data from different restriction enzymes to *Cucurbita pepo* transcript sequences using BLAST
+* Compared Genotype by Sequencing data from different restriction enzymes to *Cucurbita pepo* transcript sequences using [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 
-* Developed and tested KASP markers for relevant genes in peppers to make available for breeding work
+* Developed and tested [KASP markers](https://www.protocols.io/view/kasp-genotyping-kqdg39qr7g25/v1) for relevant genes in peppers to make available for breeding work
 
-* Extracted DNA and utilized PCR and DNA sequencing to determine whether a mutation in a predicted gene was responsible for
-the observed phenotype in peppers.
+* Extracted DNA and utilized PCR and DNA sequencing to determine whether a mutation in a predicted gene was responsible for the observed phenotype in peppers.
 
 ## Relevant Publications
 
