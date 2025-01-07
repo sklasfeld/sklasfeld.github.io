@@ -43,8 +43,8 @@ graph TD;
 ```
 -->            
 <p align="center">
-<img class="block dark:hidden" src="/project_5.png" alt="modifersimage" width="350"/>
-<img class="hidden dark:block" src="/project_invert_5.png" alt="modifersimage" width="350"/>
+<img class="block dark:hidden" src="/project-5.png" alt="modifersimage" width="350"/>
+<img class="hidden dark:block" src="/project-5_invert.png" alt="modifersimage" width="350"/>
 </p>
 
 
