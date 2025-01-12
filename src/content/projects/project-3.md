@@ -11,7 +11,7 @@ seo:
 
 ![Project preview](/project-3.png)
 
-**Figure**. Illustration of the automated filtering process for identifying miRNAs in *Hydractinia*, marine organisms with the capacity to regenerate their entire body throughout their lifetime, which considers secondary structure and computational score given by miRDeep2 ([Schnitzler *et al* 2023](https://genome.cshlp.org/content/suppl/2024/04/15/gr.278382.123.DC1/Supplemental_Material.pdf))
+**Figure**. Illustration of the automated filtering process for identifying miRNAs in *Hydractinia*, marine organisms with the capacity to regenerate their entire body throughout their lifetime, which considers secondary structure and computational score given by [mirDeep2](https://www.mdc-berlin.de/content/mirdeep2-documentation) ([Schnitzler *et al* 2023](https://genome.cshlp.org/content/suppl/2024/04/15/gr.278382.123.DC1/Supplemental_Material.pdf))
 
 ## Summary:
 
