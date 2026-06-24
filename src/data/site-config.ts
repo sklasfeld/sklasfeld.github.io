@@ -106,7 +106,9 @@ const siteConfig: SiteConfig = {
     text: "A computational biologist with expertise in statistical genetics \
         and genomics analysis, I am committed to solving complex questions through \
         data analysis, statistical inference, collaboration, and creativity.<br><br>\
-        I am currently working as an Independent Contractor at Genscience. \
+        I am currently working as a Customer Solutions Architect at \
+        <a href='https://paradigm4.com/' target='_blank' rel='noopener noreferrer'>Paradigm4</a>, \
+        designing and automating human genetic analyses and workflows at biobank scale. \
         <div class='underline'> \
         [Check out my postdoc project in Human Genetics and Genomics Advances](https://www.cell.com/hgg-advances/fulltext/S2666-2477(25)00063-6)! \
         </div>",
