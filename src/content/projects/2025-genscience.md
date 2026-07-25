@@ -18,7 +18,7 @@ references:
 
 ## Summary
 
-- Conduct subject-level genetic analysis to investigate the role of genomic variation in disease risk and progression
-- Apply statistical and bioinformatics methods to large-scale datasets to interpret findings and contribute to hypothesis-driven study design
+- Conducted subject-level genetic analyses within the [UK Biobank Research Analysis Platform (UKB-RAP)](https://www.ukbiobank.ac.uk/use-our-data/research-analysis-platform/) and [All of Us Researcher Workbench](https://www.researchallofus.org/data-tools/workbench/) to investigate the role of genomic variation in disease risk and progression
+- Applied statistical and bioinformatics methods including variant annotation ([VEP](https://www.ensembl.org/vep), [LOFTEE](https://github.com/konradjk/loftee)), quality control filtering, and association testing to interpret findings and support hypothesis-driven study design
 
 [Read my blog series on working with biobank-scale data →](/blog/biobank-intro-series/)

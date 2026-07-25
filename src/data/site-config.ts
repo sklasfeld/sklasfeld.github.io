@@ -113,7 +113,7 @@ const siteConfig: SiteConfig = {
         [Check out my postdoc project in Human Genetics and Genomics Advances](https://www.cell.com/hgg-advances/fulltext/S2666-2477(25)00063-6)! \
         </div>",
     image: {
-      src: '/sklasfeld_cartoon.jpg',
+      src: '/sklasfeld_cartoon.png',
       alt: 'Professional Photo of Samantha Klasfeld',
     },
     actions: [
