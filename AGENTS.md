@@ -27,7 +27,7 @@ src/
   content/
     blog/           # Blog posts (.md or .mdx)
       biobank-intro-series/   # Example multi-part series
-    pages/          # Static pages (about, terms)
+    pages/          # Static pages (terms)
     projects/       # Project showcases
   data/
     site-config.ts  # Site metadata, nav links, hero content
@@ -196,6 +196,56 @@ Defined in `src/styles/global.css` inside `@layer base`:
 - Store blog images in `public/blog_images/[series-name]/`
 - Reference in markdown as `/blog_images/[series-name]/filename.png`
 - Always include descriptive `alt` text
+
+---
+
+## Page Structure
+
+| Route | Source | Notes |
+|-------|--------|-------|
+| `/` | `src/pages/index.astro` | Fully hand-coded (see quirk below) — hero, technical expertise, featured work experiences, education, and an "About Me" section with a featured-publication card |
+| `/projects` | `src/pages/projects/[...page].astro` | Paginated list of all `projects` collection entries |
+| `/projects/[id]` | `src/pages/projects/[id].astro` | One page per project entry, renders `headerImage`, `publications`, `presentations`, `references` |
+| `/blog` | `src/pages/blog/[...page].astro` | Paginated blog index |
+| `/blog/[id]` | `src/pages/blog/[...id].astro` | Individual post, handles series prev/next nav |
+| `/blog/[series]` | `src/pages/blog/[series].astro` | Series landing page, auto-generated from `series.name` |
+| `/contact` | `src/pages/contact.astro` | Netlify Forms (`data-netlify="true"`), no client validation |
+| `/terms`, any `pages` collection entry | `src/pages/[...id].astro` | Generic renderer for the `pages` content collection |
+| `/404` | `src/pages/404.astro` | |
+
+Every page routes through `src/layouts/BaseLayout.astro`, which renders `Nav.astro` + `<slot />` + `Footer.astro` and injects `BaseHead.astro` (meta/SEO) and the theme-init script.
+
+Key components: `Hero.astro` (profile image + markdown text + action buttons — see quirk below), `ProjectPreview.astro` / `PostPreview.astro` / `SeriesPreview.astro` (card-style list previews), `PublicationCard.astro` / `PresentationCard.astro` / `ReferenceButtons.astro` (used on project detail pages), `ThemeToggle.astro` (client-side dark mode switch).
+
+---
+
+## Known Quirks
+
+- **`src/pages/index.astro` does not use `Hero.astro` or `siteConfig.hero`.** The homepage header, "Technical Expertise," "Work Experiences," "Education," and "About Me" sections are all hand-written directly in `index.astro` with hardcoded copy (e.g. current employer name). `site-config.ts`'s `hero` field and `Hero.astro` component are unused dead code on the homepage — editing `site-config.ts` will *not* change what visitors see on `/`. When updating "current role" info, `index.astro`'s "About Me" section is the actual source of truth on the home page.
+- **`BaseLayout.astro`'s `showHeader` prop is unused.** `[...id].astro` passes `showHeader={false}` expecting the nav to hide, but `BaseLayout.astro` destructures `showHeader` and never applies it — `Nav` always renders regardless. Flagged by ESLint (`@typescript-eslint/no-unused-vars`), not yet fixed.
+- **Image file extensions can lie about actual format.** `public/sklasfeld_cartoon.png` was previously named `.jpg` while actually being PNG data with an alpha channel; the static server sets `Content-Type` from the extension, so the mismatch caused the transparent background to not render correctly. Before trusting an image's transparency/format, check the real encoding (e.g. `file <path>` or `sharp(...).metadata()`), don't assume from the extension.
+- **`about.md` was intentionally removed** (previously at `/about`, unlinked from nav) — the site owner considers the whole site "about me" and didn't want a separate about page. Don't re-add one without checking first.
+
+---
+
+## Linting
+
+ESLint is configured via flat config at `eslint.config.js`: `@eslint/js` recommended + `typescript-eslint` recommended + `eslint-plugin-astro` recommended, with `eslint-config-prettier` last to avoid rule conflicts with the existing Prettier setup. `*.cjs` files (e.g. `tailwind.config.cjs`) get a `globals.node` override plus `@typescript-eslint/no-require-imports: off`, since they're legitimately CommonJS.
+
+```bash
+npm run lint       # check
+npm run lint:fix   # autofix
+```
+
+As of this writing, `npm run lint` reports 8 pre-existing issues that were surfaced but intentionally left unfixed (out of scope at the time): unused vars in `Footer.astro` (`any` type), `BaseLayout.astro` (`showHeader`, see quirk above), `[...id].astro` (`seo`), `index.astro` (`featuredPosts`), `data-utils.ts` (`lastPost`); `prefer-const` in `blog/[...id].astro`; `no-var` in `common-utils.ts`. Fix opportunistically or on request.
+
+One real bug ESLint caught and fixed: `astro.config.mjs` had `expressiveCode` imported twice (duplicate binding) — the second import was removed.
+
+---
+
+## Dependency Vulnerabilities
+
+`npm audit fix` (non-breaking) was run, reducing reported vulnerabilities from 32 to 11. The remaining 11 all require breaking major-version bumps (`astro` 5→7, `eslint` 9→10 via `npm audit fix --force`) and were deliberately not applied without testing. Nearly all of the remaining advisories are in Astro's *build-time* transitive deps (Vite, Rollup, esbuild, PostCSS, sharp, dompurify, devalue) — this site builds to fully static HTML with no SSR runtime, so these don't expose visitors to anything at request time; the main residual risk is to the build/dev environment itself. Before running `--force`, rebuild and manually check every route (content collections, image handling, and Tailwind integration APIs have changed across Astro major versions).
 
 ---
 
