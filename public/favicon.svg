@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="48.917416mm"
-   height="71.686104mm"
-   viewBox="0 0 48.917416 71.686104"
+   width="59.924339mm"
+   height="80.89785mm"
+   viewBox="0 0 59.92434 80.89785"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
@@ -27,12 +27,12 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      inkscape:zoom="0.70644641"
-     inkscape:cx="24.064104"
-     inkscape:cy="140.84579"
+     inkscape:cx="123.15159"
+     inkscape:cy="203.83712"
      inkscape:window-width="1600"
-     inkscape:window-height="942"
+     inkscape:window-height="925"
      inkscape:window-x="2044"
-     inkscape:window-y="40"
+     inkscape:window-y="30"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
@@ -54,7 +54,15 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-98.163754,-96.413629)">
+     transform="translate(-92.285767,-91.245964)">
+    <rect
+       style="fill:#dfdff5;fill-opacity:0.996078;fill-rule:evenodd;stroke:none;stroke-width:4.99437;stroke-linecap:round;stroke-opacity:0.996078;paint-order:markers stroke fill"
+       id="rect3"
+       width="59.924339"
+       height="80.89785"
+       x="92.285767"
+       y="91.245964"
+       ry="2.1368337" />
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"
@@ -62,9 +70,9 @@
        style="font-weight:bold;font-size:192px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#ff0000;stroke:#ff00ff;stroke-width:3.02362;stroke-miterlimit:2.8;stroke-dashoffset:27.8011;paint-order:markers stroke fill"><tspan
          x="379.73926"
          y="504.17922"
-         id="tspan4"><tspan
+         id="tspan5"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan3">S</tspan></tspan></text>
+           id="tspan4">S</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,85.392182,7.4905422)"
@@ -72,7 +80,7 @@
        style="font-weight:bold;font-size:192px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#000000;stroke:none;stroke-width:3.02362;stroke-miterlimit:2.8;stroke-dashoffset:27.8011;paint-order:markers stroke fill"><tspan
          x="44.989258"
          y="604.68313"
-         id="tspan5">J</tspan></text>
+         id="tspan6">J</tspan></text>
     <path
        style="font-weight:bold;font-size:50.8px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;text-anchor:middle;stroke-width:0.8;stroke-miterlimit:2.8;stroke-dashoffset:27.8011;paint-order:markers stroke fill"
        d="m 114.28938,167.25898 v -36.36367 h 7.34218 v 16.14785 l 14.83321,-16.14785 h 9.87226 l -13.69218,14.16347 14.43632,22.2002 h -9.50019 l -9.99629,-17.06563 -5.95313,6.07715 -2.99622,4.62152 z"
