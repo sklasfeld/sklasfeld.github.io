@@ -16,17 +16,17 @@ const { presentation } = Astro.props;
 ---
 
 <article class="relative pl-6 border-l-4 border-accent/30 py-3">
-  <h4 class="text-base sm:text-lg font-medium text-main mb-2">
+  <h4 class="text-lg sm:text-xl font-display font-medium text-main mb-2">
     {presentation.title}
   </h4>
   {presentation.authors && (
-    <p class="text-sm sm:text-base text-main/70 mb-1">
+    <p class="text-base sm:text-lg text-main/70 mb-1">
       {presentation.authors}
     </p>
   )}
-  <div class="text-sm text-main/60 flex flex-wrap items-center gap-2">
+  <div class="text-base font-mono text-main/60 flex flex-wrap items-center gap-2">
     {presentation.type && (
-      <span class="inline-flex items-center px-2 py-0.5 rounded bg-accent/10 text-accent font-medium">
+      <span class="inline-flex items-center px-2 py-0.5 bg-accent/10 text-accent font-medium">
         {presentation.type}
       </span>
     )}

@@ -168,16 +168,41 @@ Do not use em dashes (`—`). Rewrite as separate sentences or use a comma inste
 
 ## Theming
 
-Colors are CSS custom properties defined in `src/styles/global.css` and consumed by Tailwind via `tailwind.config.cjs`.
+"Instrument Panel" direction — violet + teal on cool graphite, sharp corners, left-rail cards. Colors are CSS custom properties defined in `src/styles/global.css` and consumed by Tailwind via `tailwind.config.cjs`.
 
 | Variable | Light | Dark |
 |----------|-------|------|
-| `--color-text-main` | `#171717` | `#F2F1EC` |
-| `--color-bg-main` | `#F2F1EC` | `#171717` |
-| `--color-bg-muted` | `#EAE9E1` | `#242424` |
-| `--color-accent` | `#2C5282` | `#63B3ED` |
+| `--color-text-main` | `#201F24` | `#F1F0F4` |
+| `--color-bg-main` | `#F2F2F5` | `#16161A` |
+| `--color-bg-muted` | `#DBDAE3` | `#2A2932` |
+| `--color-accent` (violet) | `#5B3E96` | `#B48CFF` |
+| `--color-accent-secondary` (teal) | `#1B9AAA` | `#2DD4E8` |
 
 Dark mode is class-based (`html.dark`). Toggle is handled client-side in `BaseLayout.astro`.
+
+Dark-mode accent values are brightened relative to light mode (not a naive same-hex reuse) — they need more voltage to read clearly against the near-black background. Violet is the primary/interactive accent (buttons, links, card left-rail). Teal is the secondary accent, used sparingly (e.g. `SeriesPreview.astro`'s rail, tags) — don't let it compete with violet for primary emphasis.
+
+### Fonts
+
+**One font site-wide (Lexend), but three independent levers to change it by.** `src/data/fonts.cjs` is the single source of truth — it exports three named stacks (`display`, `body`, `label`), each already appending the matching Tailwind default fallback:
+
+| `fonts.cjs` export | Tailwind key / class | Currently | Role |
+|---|---|---|---|
+| `display` | `font-display` | Lexend | Headers and titles only (h1–h6, card titles) |
+| `body` | `font-sans` | Lexend | Body text and the sitewide default — Tailwind preflight applies `fontFamily.sans` to `html`, so this key must stay named `sans` even though the export is called `body` |
+| `label` | `font-mono` | Lexend | Dates, timeperiods, tags, nav links — short data-flavored text |
+
+All three currently point at the same family on purpose — the site reads as one consistent typeface. They are still three separate settings, not one: give `display` a different family than `body`/`label` and only headers change, everything else stays Lexend. This is how the site looked before this file existed (Big Shoulders Display for headers, Public Sans for body, JetBrains Mono for labels) — that three-font setup is a valid configuration of this same system, not a different system.
+
+`tailwind.config.cjs` just does `const fonts = require('./src/data/fonts.cjs')` and assigns `fonts.display`/`fonts.body`/`fonts.label` to the `fontFamily` keys — it has no font names of its own.
+
+One self-hosted `@fontsource-variable` package currently backs all three roles, imported once in `global.css` (no CDN). `BaseHead.astro` additionally preloads its woff2 file directly. If a role's font is ever changed to a different family, update **all three** in lockstep for that family: `fonts.cjs`, the `global.css` `@import`, and the `BaseHead.astro` preload import + `<link>` — otherwise the dev server throws a "Cannot find module" error at the old path. If a family stops being used by any role, `npm uninstall` its `@fontsource-variable` package too — don't leave it installed-but-unreferenced.
+
+Do not reintroduce a `font-serif` class — the display role is `font-display` (renamed from a prior `font-serif` holdover that didn't describe an actual serif font). `blockquote` inside markdown content deliberately uses `theme('fontFamily.sans')` (body role), not `display` — if `display` is ever set back to a bold condensed poster face, italicizing it at 1.3–1.67em for a multi-sentence quote reads as decorative rather than legible. Keep `font-display` scoped to genuine headers/titles, not longer-form text, regardless of which family it points to.
+
+### Shape system
+
+Cards (`ProjectPreview.astro`, `PostPreview.astro`, `SeriesPreview.astro`) and buttons (`Button.astro`) use sharp corners (no `rounded-*`) with a colored left border (`border-l-4 border-l-accent` or `border-l-accent-secondary`) instead of the old rounded-corner + drop-shadow card style. When adding new card-like components, follow this pattern rather than reintroducing `rounded-lg`/`shadow-sm`.
 
 ---
 

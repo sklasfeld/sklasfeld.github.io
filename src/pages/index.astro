@@ -32,17 +32,17 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
       </figure>
       <div class="text-center">
         <h1
-          class="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold mb-3"
+          class="text-5xl sm:text-6xl lg:text-7xl font-display font-semibold mb-3"
         >
           Samantha Klasfeld
         </h1>
-        <p class="text-xl sm:text-2xl text-main opacity-80 mb-6">
+        <p class="text-2xl sm:text-3xl text-main opacity-80 mb-6">
           Computational Biologist, Bioinformatics Scientist
         </p>
         <div class="flex justify-center gap-6">
           <a
             href="Samantha_Klasfeld_CV.pdf"
-            class="inline-flex items-center justify-center px-8 py-3 text-lg font-sans font-normal leading-tight bg-accent text-white dark:text-black border-2 border-accent rounded-xl transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+            class="inline-flex items-center justify-center px-8 py-3 text-xl font-sans font-normal leading-tight bg-accent text-white dark:text-black border-2 border-accent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
           >
             Download Resume
           </a>
@@ -60,25 +60,35 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
   <!-- Technical Skills Section -->
   <section class="mb-16 sm:mb-20 lg:max-w-5xl max-w-full mx-auto">
     <h2
-      class="mb-8 text-3xl leading-tight font-sans font-semibold underline sm:mb-10 sm:text-4xl"
+      class="mb-8 text-3xl leading-tight font-display font-semibold underline sm:mb-10 sm:text-4xl"
     >
       Technical Expertise
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div>
-        <h3 class="font-semibold mb-2 text-xl sm:text-2xl">Programming</h3>
-        <p class="text-lg opacity-80">Python, R, Bash</p>
+        <h3 class="font-display font-semibold mb-2 text-2xl sm:text-3xl">
+          Programming
+        </h3>
+        <p class="text-xl font-mono opacity-80">Python, R, Bash</p>
       </div>
       <div>
-        <h3 class="font-semibold mb-2 text-xl sm:text-2xl">Analysis</h3>
-        <p class="text-lg opacity-80">GWAS, ChIP-seq, RNA-seq, ATAC-seq</p>
+        <h3 class="font-display font-semibold mb-2 text-2xl sm:text-3xl">
+          Analysis
+        </h3>
+        <p class="text-xl font-mono opacity-80">
+          GWAS, ChIP-seq, RNA-seq, ATAC-seq
+        </p>
       </div>
       <div>
-        <h3 class="font-semibold mb-2 text-xl sm:text-2xl">Databases</h3>
-        <p class="text-lg opacity-80">UK Biobank, All of Us, FinnGen, gnomAD</p>
+        <h3 class="font-display font-semibold mb-2 text-2xl sm:text-3xl">
+          Databases
+        </h3>
+        <p class="text-xl font-mono opacity-80">
+          UK Biobank, All of Us, FinnGen, gnomAD
+        </p>
       </div>
     </div>
-    <p class="mt-6 text-lg opacity-70 text-accent font-medium">
+    <p class="mt-6 text-xl text-accent font-medium">
       See full skills list in my <a
         href="Samantha_Klasfeld_CV.pdf"
         class="underline hover:opacity-70">resume</a
@@ -95,7 +105,7 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
   {
     featuredProjects?.length > 0 && (
       <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto">
-        <h2 class="mb-8 text-3xl leading-tight font-sans font-semibold underline sm:mb-10 sm:text-4xl">
+        <h2 class="mb-8 text-3xl leading-tight font-display font-semibold underline sm:mb-10 sm:text-4xl">
           Work Experiences
         </h2>
         {featuredProjects.map((project) => (
@@ -119,22 +129,24 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
 
   <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto">
     <h2
-      class="text-3xl leading-tight font-sans font-semibold underline mb-6 sm:mb-8 sm:text-4xl"
+      class="text-3xl leading-tight font-display font-semibold underline mb-6 sm:mb-8 sm:text-4xl"
     >
       Education
     </h2>
     <div class="mb-8 sm:mb-10">
-      <h3 class="text-xl font-semibold mb-3 sm:text-2xl">
+      <h3 class="font-display text-2xl font-semibold mb-3 sm:text-3xl">
         University of Pennsylvania
       </h3>
-      <p class="text-lg leading-relaxed">
+      <p class="text-xl leading-relaxed">
         Perelman School of Medicine, Philadelphia, PA<br />
         Doctor of Philosophy in Genomics and Computational Biology, 2015-2021
       </p>
     </div>
     <div>
-      <h3 class="text-xl font-semibold mb-3 sm:text-2xl">Cornell University</h3>
-      <p class="text-lg leading-relaxed">
+      <h3 class="font-display text-2xl font-semibold mb-3 sm:text-3xl">
+        Cornell University
+      </h3>
+      <p class="text-xl leading-relaxed">
         College of Agriculture and Life Sciences, Ithaca, NY<br />
         Bachelor of Science in Biology, Concentration in Computational Biology, 2010-2014
       </p>
@@ -149,7 +161,7 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
   <!-- About Me Section -->
   <section class="mb-16 sm:mb-20 lg:max-w-5xl max-w-full mx-auto">
     <h2
-      class="text-3xl leading-tight font-sans font-semibold underline mb-6 sm:mb-8 sm:text-4xl"
+      class="text-3xl leading-tight font-display font-semibold underline mb-6 sm:mb-8 sm:text-4xl"
     >
       About Me
     </h2>
@@ -157,7 +169,7 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
       <!-- Main content -->
       <div class="lg:col-span-2 space-y-6">
-        <div class="text-lg leading-relaxed space-y-4">
+        <div class="text-xl leading-relaxed space-y-4">
           <p>
             A computational biologist with expertise in <span class="font-bold"
               >statistical genetics</span
@@ -174,8 +186,8 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
               target="_blank"
               rel="noopener noreferrer"
               class="underline hover:opacity-70">Paradigm4</a
-            >, designing and automating human genetic analyses and workflows
-            at biobank scale.
+            >, designing and automating human genetic analyses and workflows at
+            biobank scale.
           </p>
         </div>
       </div>
@@ -183,7 +195,7 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
       <!-- Featured Publication Card -->
       <div class="lg:col-span-1">
         <div
-          class="bg-muted border-2 border-accent rounded-xl p-6 h-full flex flex-col"
+          class="bg-muted border border-main border-opacity-20 border-l-4 border-l-accent-secondary p-6 h-full flex flex-col"
         >
           <div class="flex items-center gap-2 mb-4">
             <svg
@@ -201,18 +213,18 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
               ></path>
             </svg>
             <h3
-              class="text-sm uppercase tracking-wider text-accent font-semibold"
+              class="text-base font-mono uppercase tracking-wider text-accent-secondary font-semibold"
             >
               Latest Publication
             </h3>
           </div>
-          <p class="text-sm mb-4 flex-grow leading-relaxed">
+          <p class="text-base mb-4 flex-grow leading-relaxed">
             Common genetic modifiers influence cardiomyopathy susceptibility
             among the carriers of rare pathogenic variants
           </p>
           <a
             href="https://www.cell.com/hgg-advances/fulltext/S2666-2477(25)00063-6"
-            class="inline-flex items-center justify-center gap-2 px-4 py-3 bg-accent text-white border-2 border-accent rounded-lg hover:bg-transparent hover:text-accent transition-all duration-200 text-sm font-medium"
+            class="inline-flex items-center justify-center gap-2 px-4 py-3 bg-accent text-white border-2 border-accent hover:bg-transparent hover:text-accent transition-all duration-200 text-base font-medium"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -244,7 +256,7 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
     {
         featuredPosts?.length > 0 && (
             <div class="mb-16 sm:mb-24">
-                <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">Writing</h2>
+                <h2 class="mb-12 text-xl font-display italic sm:mb-16 sm:text-2xl">Writing</h2>
                 {featuredPosts.map((post) => (
                     <PostPreview post={post} class="mb-10 sm:mb-12" headingLevel="h3" />
                 ))}
