@@ -1,26 +1,32 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const fonts = require('./src/data/fonts.cjs');
 
 module.exports = {
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
     darkMode: 'class',
     theme: {
         fontFamily: {
-            sans: ['Inter Variable', ...defaultTheme.fontFamily.sans],
-            serif: ['Newsreader Variable', ...defaultTheme.fontFamily.serif]
+            // 'sans' stays this exact key name because Tailwind's preflight
+            // applies fontFamily.sans to <html> as the site default — see src/data/fonts.cjs
+            sans: fonts.body,
+            display: fonts.display,
+            mono: fonts.label
         },
         extend: {
             textColor: {
                 main: 'rgb(var(--color-text-main) / <alpha-value>)',
-                accent: 'rgb(var(--color-accent) / <alpha-value>)'
+                accent: 'rgb(var(--color-accent) / <alpha-value>)',
+                'accent-secondary': 'rgb(var(--color-accent-secondary) / <alpha-value>)'
             },
             backgroundColor: {
                 main: 'rgb(var(--color-bg-main) / <alpha-value>)',
                 muted: 'rgb(var(--color-bg-muted) / <alpha-value>)',
-                accent: 'rgb(var(--color-accent) / <alpha-value>)'
+                accent: 'rgb(var(--color-accent) / <alpha-value>)',
+                'accent-secondary': 'rgb(var(--color-accent-secondary) / <alpha-value>)'
             },
             borderColor: {
                 main: 'rgb(var(--color-border-main) / <alpha-value>)',
-                accent: 'rgb(var(--color-accent) / <alpha-value>)'
+                accent: 'rgb(var(--color-accent) / <alpha-value>)',
+                'accent-secondary': 'rgb(var(--color-accent-secondary) / <alpha-value>)'
             },
             typography: (theme) => ({
                 dante: {
@@ -56,7 +62,7 @@ module.exports = {
                             }
                         },
                         'h1,h2,h3,h4,h5,h6': {
-                            fontFamily: theme('fontFamily.serif'),
+                            fontFamily: theme('fontFamily.display'),
                             fontWeight: 500
                         },
                         'code::before': {
@@ -76,7 +82,7 @@ module.exports = {
                         },
                         blockquote: {
                             border: 0,
-                            fontFamily: theme('fontFamily.serif'),
+                            fontFamily: theme('fontFamily.sans'),
                             fontSize: '1.3125em',
                             fontStyle: 'italic',
                             fontWeight: 'normal',

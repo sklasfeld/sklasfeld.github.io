@@ -24,19 +24,19 @@ const { publication } = Astro.props;
   <article
     class="relative pl-6 border-l-4 border-accent/30 hover:border-accent transition-all duration-200 py-2"
   >
-    <h3 class="text-lg sm:text-xl font-medium text-main group-hover:text-accent transition-colors duration-200 mb-2">
+    <h3 class="text-xl sm:text-2xl font-display font-medium text-main group-hover:text-accent transition-colors duration-200 mb-2">
       {publication.title}
       <span class="inline-block ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" aria-hidden="true">
         ↗
       </span>
     </h3>
     {publication.authors && (
-      <p class="text-sm sm:text-base text-main/70 mb-1">
+      <p class="text-base sm:text-lg text-main/70 mb-1">
         {publication.authors}
       </p>
     )}
     {(publication.venue || publication.year) && (
-      <p class="text-sm text-main/60 flex items-center gap-2">
+      <p class="text-base font-mono text-main/60 flex items-center gap-2">
         {publication.venue && (
           <span class="italic">{publication.venue}</span>
         )}

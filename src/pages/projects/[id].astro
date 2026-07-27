@@ -63,11 +63,11 @@ const imageLongDescription =
   <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto py-8 sm:py-10">
     <header class="mb-8 sm:mb-10">
       <h1
-        class="text-3xl sm:text-4xl lg:text-5xl leading-tight font-sans font-semibold mb-3"
+        class="text-4xl sm:text-5xl lg:text-6xl leading-tight font-display font-semibold mb-3"
       >
         {title}
       </h1>
-      <div class="text-lg sm:text-xl lg:text-2xl leading-relaxed">
+      <div class="text-xl sm:text-2xl lg:text-3xl font-mono leading-relaxed">
         <span class="font-medium">{company}</span>
         {timeperiod && <span class="opacity-80"> | {timeperiod}</span>}
       </div>
@@ -109,7 +109,7 @@ const imageLongDescription =
     }
     <div
       id="markdown-content"
-      class="max-w-none prose prose-lg sm:prose-xl lg:prose-2xl prose-headings:font-sans prose-headings:font-semibold prose-headings:text-main dark:prose-headings:text-white prose-h2:text-3xl prose-h2:sm:text-4xl prose-h2:leading-tight prose-p:text-main prose-p:text-lg sm:prose-p:text-xl prose-p:leading-relaxed prose-a:text-main prose-strong:text-main prose-code:text-main prose-li:text-main prose-ul:text-main prose-ol:text-main"
+      class="max-w-none prose prose-lg sm:prose-xl lg:prose-2xl prose-headings:font-display prose-headings:font-semibold prose-headings:text-main dark:prose-headings:text-white prose-h2:text-3xl prose-h2:sm:text-4xl prose-h2:leading-tight prose-p:text-main prose-p:text-lg sm:prose-p:text-xl prose-p:leading-relaxed prose-a:text-main prose-strong:text-main prose-code:text-main prose-li:text-main prose-ul:text-main prose-ol:text-main"
     >
       <Content />
     </div>
@@ -130,7 +130,7 @@ const imageLongDescription =
 
           // Create summary element
           const summary = document.createElement('summary');
-          summary.className = 'cursor-pointer text-3xl sm:text-4xl leading-tight font-sans font-semibold mb-6 hover:text-accent transition-colors flex items-center gap-3 text-main dark:text-white';
+          summary.className = 'cursor-pointer text-4xl sm:text-5xl leading-tight font-display font-semibold mb-6 hover:text-accent transition-colors flex items-center gap-3 text-main dark:text-white';
 
           // Create span for heading text
           const span = document.createElement('span');
@@ -176,7 +176,7 @@ const imageLongDescription =
       publications && publications.length > 0 && (
         <div class="mt-12 sm:mt-16">
           <details class="group" open>
-            <summary class="cursor-pointer text-3xl sm:text-4xl leading-tight font-sans font-semibold mb-6 hover:text-accent transition-colors flex items-center gap-3">
+            <summary class="cursor-pointer text-4xl sm:text-5xl leading-tight font-display font-semibold mb-6 hover:text-accent transition-colors flex items-center gap-3">
               <span>Publications</span>
               <svg
                 class="w-6 h-6 transition-transform group-open:rotate-180"
@@ -202,7 +202,7 @@ const imageLongDescription =
       relevantPublications && relevantPublications.length > 0 && (
         <div class="mt-12 sm:mt-16">
           <details class="group" open>
-            <summary class="cursor-pointer text-3xl sm:text-4xl leading-tight font-sans font-semibold mb-6 hover:text-accent transition-colors flex items-center gap-3">
+            <summary class="cursor-pointer text-4xl sm:text-5xl leading-tight font-display font-semibold mb-6 hover:text-accent transition-colors flex items-center gap-3">
               <span>Relevant Publications</span>
               <svg
                 class="w-6 h-6 transition-transform group-open:rotate-180"
@@ -228,7 +228,7 @@ const imageLongDescription =
       presentations && presentations.length > 0 && (
         <div class="mt-12 sm:mt-16">
           <details class="group" open>
-            <summary class="cursor-pointer text-3xl sm:text-4xl leading-tight font-sans font-semibold mb-6 hover:text-accent transition-colors flex items-center gap-3">
+            <summary class="cursor-pointer text-4xl sm:text-5xl leading-tight font-display font-semibold mb-6 hover:text-accent transition-colors flex items-center gap-3">
               <span>Presentations</span>
               <svg
                 class="w-6 h-6 transition-transform group-open:rotate-180"
@@ -254,7 +254,7 @@ const imageLongDescription =
       references && references.length > 0 && (
         <div class="mt-12 sm:mt-16">
           <details class="group" open>
-            <summary class="cursor-pointer text-3xl sm:text-4xl leading-tight font-sans font-semibold mb-6 hover:text-accent transition-colors flex items-center gap-3">
+            <summary class="cursor-pointer text-4xl sm:text-5xl leading-tight font-display font-semibold mb-6 hover:text-accent transition-colors flex items-center gap-3">
               <span>References</span>
               <svg
                 class="w-6 h-6 transition-transform group-open:rotate-180"
@@ -278,7 +278,7 @@ const imageLongDescription =
       (prevProject || nextProject) && (
         <div class="mt-16 sm:mt-24 pt-12 sm:pt-16 border-t-2 border-main">
           <div class="mb-16 sm:mb-24">
-            <h2 class="mb-8 text-3xl leading-tight font-sans font-semibold sm:mb-10 sm:text-4xl">
+            <h2 class="mb-8 text-4xl leading-tight font-display font-semibold sm:mb-10 sm:text-5xl">
               More Work Experiences
             </h2>
             {nextProject && (

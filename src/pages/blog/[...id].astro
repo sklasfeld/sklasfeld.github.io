@@ -61,25 +61,25 @@ const { Content } = await render(post);
           series && seriesSlug && (
             <a
               href={`/blog/${seriesSlug}/`}
-              class="inline-block mb-4 text-sm font-semibold uppercase tracking-wider text-accent hover:underline"
+              class="inline-block mb-4 text-base font-mono font-semibold uppercase tracking-wider text-accent hover:underline"
             >
               &larr; {series.name} &middot; Part {series.order}
             </a>
           )
         }
         <h1
-          class="text-3xl sm:text-4xl lg:text-5xl leading-tight font-sans font-semibold mb-3"
+          class="text-4xl sm:text-5xl lg:text-6xl leading-tight font-display font-semibold mb-3"
         >
           {title}
         </h1>
         {
           excerpt && (
-            <p class="text-lg sm:text-xl mt-4 mb-2 *:opacity-80 italic">
+            <p class="text-xl sm:text-2xl mt-4 mb-2 *:opacity-80 italic">
               {excerpt}
             </p>
           )
         }
-        <div class="text-base sm:text-lg opacity-80">
+        <div class="text-lg sm:text-xl font-mono opacity-80">
           <FormattedDate date={publishDate} />
           {
             updatedDate && (
@@ -103,7 +103,7 @@ const { Content } = await render(post);
       >
         {
           tags.length > 0 && (
-            <div class="flex flex-wrap gap-x-5 gap-y-1 text-sm">
+            <div class="flex flex-wrap gap-x-5 gap-y-1 text-base font-mono">
               {tags.map((tag) => (
                 <a
                   class="text-main hover:underline"
@@ -127,7 +127,7 @@ const { Content } = await render(post);
     {
       (prevPost || nextPost) && (
         <div class="my-16 sm:my-24">
-          <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">
+          <h2 class="mb-12 font-display text-xl italic sm:mb-16 sm:text-2xl">
             {series ? 'More in This Series' : 'Read Next'}
           </h2>
           {nextPost && (

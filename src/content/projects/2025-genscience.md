@@ -1,5 +1,5 @@
 ---
-title: 'Independent Contractor'
+title: 'Independent Bioinformatics Consultant'
 timeperiod: 'Sep 2025 – April 2026'
 company: 'Genscience, Remote'
 publishDate: 'Sep 30 2025'

@@ -46,13 +46,13 @@ const { title, text, image, actions } = Astro.props;
         )}
         <div class="flex flex-col gap-8">
           {title && (
-            <h1 class="text-3xl leading-tight font-serif font-medium underline sm:text-4xl sm:leading-tight">
+            <h1 class="text-3xl leading-tight font-display font-medium underline sm:text-4xl sm:leading-tight">
               {title}
             </h1>
           )}
           {text && (
             <div
-              class="max-w-none font-serif text-lg sm:text-xl leading-relaxed"
+              class="max-w-none font-display text-lg sm:text-xl leading-relaxed"
               set:html={marked.parse(text)}
             />
           )}
